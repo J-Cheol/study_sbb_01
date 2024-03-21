@@ -1,7 +1,5 @@
 package com.ll.study_sbb_01.service;
 
-import java.util.Optional;
-
 import com.ll.study_sbb_01.domain.Member;
 import com.ll.study_sbb_01.repository.MemberRepository;
 import com.ll.study_sbb_01.repository.MemoryMemberRepository;
@@ -23,7 +21,7 @@ public class MemberService {
 		// null이 있을 수 있는 경우가 있다면 옵셔널로 감싼다 옵셔널이 숨겨져있다.
 		memberRepository.findByName(member.getName())
 			.ifPresent(m -> {
-				throw new IllegalStateException("이미 존재하는 회원입니다.")
+				throw new IllegalStateException("이미 존재하는 회원입니다.");
 			});
 	}
 }
