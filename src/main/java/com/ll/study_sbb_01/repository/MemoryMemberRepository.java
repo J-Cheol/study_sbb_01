@@ -6,8 +6,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
+import org.springframework.stereotype.Repository;
+
 import com.ll.study_sbb_01.domain.Member;
 
+@Repository
 public class MemoryMemberRepository implements MemberRepository {
 
 	private static Map<Long, Member> store = new HashMap<>(); // ConcurrentHashMap을 사용해야하지만 간단한 예제라 HashMap사용 동시선(성?) 문제?
