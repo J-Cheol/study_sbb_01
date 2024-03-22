@@ -10,7 +10,7 @@ import org.springframework.stereotype.Repository;
 
 import com.ll.study_sbb_01.domain.Member;
 
-@Repository
+@Repository // 컴포넌트 스캔
 public class MemoryMemberRepository implements MemberRepository {
 
 	private static Map<Long, Member> store = new HashMap<>(); // ConcurrentHashMap을 사용해야하지만 간단한 예제라 HashMap사용 동시선(성?) 문제?

@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 import com.ll.study_sbb_01.domain.Member;
 import com.ll.study_sbb_01.repository.MemberRepository;
 
-@Service
+@Service // 컴포넌트 스캔
 public class MemberService {
 
 	private final MemberRepository memberRepository;
